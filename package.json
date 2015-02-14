@@ -14,7 +14,7 @@
     "spline",
     "browserify"
   ],
-  "author": "Steffen Baer <stbaer.mail@gmail.com>",
+  "author": "Steffen Baer",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stbaer/cardinal-spline/issues"

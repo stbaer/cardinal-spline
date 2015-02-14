@@ -11,18 +11,20 @@
  * @returns {Float32Array} - the spline points.
  */
 module.exports = function cSpline(points, tension, numOfSeg, close) {
-    // options or defaults
+
     tension = (typeof tension === 'number') ? tension : 0.5;
     numOfSeg = numOfSeg ? numOfSeg : 25;
-    var pts, // for cloning point array
-        i = 1,
-        l = points.length,
-        rPos = 0,
-        rLen = (l - 2) * numOfSeg + 2 + (close ? 2 * numOfSeg : 0),
-        res = new Float32Array(rLen),
-        cache = new Float32Array((numOfSeg + 2) * 4),
-        cachePtr = 4,
-        st, st2, st3, st23, st32, parse;
+
+    var pts; // for cloning point array
+    var i = 1;
+    var l = points.length;
+    var rPos = 0;
+    var rLen = (l - 2) * numOfSeg + 2 + (close ? 2 * numOfSeg : 0);
+    var res = new Float32Array(rLen);
+    var cache = new Float32Array((numOfSeg + 2) * 4);
+    var cachePtr = 4;
+    var st, st2, st3, st23, st32, parse;
+
     pts = points.slice(0);
     if (close) {
         pts.unshift(points[l - 1]); // insert end point as first point
