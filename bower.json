@@ -1,0 +1,25 @@
+{
+  "name": "cardinal-spline",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/stbaer/cardinal-spline",
+  "authors": [
+    "Steffen Baer <stbaer.mail@gmail.com>"
+  ],
+  "description": "cardinal spline function",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "spline",
+    "browserify"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
